@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wikijournals Mobile</title>
+</head>
+<body>
+<div data-role="page" id="contact">
+    <header data-role="header">
+        <a href="index.html#welcome" data-role="button" data-icon="home" data-iconpos="notext">Home</a>
+        <h1>Kontakt</h1>
+
+    </header>
+
+    <div data-role="content" id="contact-content">
+              <form id="contact-form">
+                  <div data-role="fieldcontain">
+                      <label for="name">Name:</label>
+                      <input type="text" name="name" id="name" value="" />
+                  </div>
+
+                  <div data-role="fieldcontain">
+                      <label for="email">E-Mail:</label>
+                      <input type="email" name="email" id="email" value="" />
+                  </div>
+
+                  <div data-role="fieldcontain">
+                      <label for="subject">Betreff:</label>
+                      <input type="text" name="subject" id="subject" value="" />
+                  </div>
+
+                  <div data-role="fieldcontain">
+                      <label for="mailtext">Anfrage:</label>
+                      <textarea name="mailtext" id="mailtext"></textarea>
+                  </div>
+
+                  <button type="submit" data-theme="a" id="submitform">Abschicken</button>
+              </form>
+
+    </div>
+
+    <footer data-role="footer">
+        <nav data-role="navbar">
+            <ul>
+                <li><a href="index.html#new" data-transition="slidedown" data-icon="plus">Neu</a></li>
+                <li><a href="index.html#search" data-transition="slidedown" data-icon="search">Suche</a></li>
+
+
+            </ul>
+
+        </nav>
+    </footer>
+
+    <script type="text/javascript">
+
+        //Formdaten an PHP-Datei senden
+        $("form#contact-form").submit(function() {
+            // we want to store the values from the form input box, then send via ajax below
+            var name = $('#name').attr('value');
+            var email = $('#email').attr('value');
+            var subject = $('#subject').attr('value');
+            var mailtext  = $('#mailtext').attr('value');
+
+            $.ajax({
+                type: "get",
+                url: "submitform.php",
+                data: "name="+ name +"&email="+ email+ "&subject="+subject+ "&mailtext="+mailtext,
+                success: function(){
+                    $.mobile.changePage("contact-success.html", { transition: "flip"} );
+                    alert('test');
+                }
+            });
+            return false;
+        });
+
+
+    </script>
+
+</div>
+
+</body>
+</html>

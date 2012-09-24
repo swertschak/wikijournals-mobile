@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wikijournals Mobile</title>
+</head>
+<body>
+<div data-role="page" id="newpublisher">
+    <header data-role="header">
+        <a href="index.html#welcome" data-role="button" data-icon="home" data-iconpos="notext">Home</a>
+        <h1>Neuer Verlag</h1>
+
+    </header>
+
+    <div data-role="content" id="publisher-new-content">
+        <form id="publisher-new-form">
+            <div data-role="fieldcontain">
+                <label for="Publisher">Verlag</label>
+                <input type="text" name="Publisher" id="Publisher" value=""/>
+            </div>
+
+            <div data-role="fieldcontain">
+                <label for="PublisherHomepage">Homepage</label>
+                <input type="url" name="PublisherHomepage" id="PublisherHomepage" value=""/>
+            </div>
+
+            <div data-role="fieldcontain">
+                <label for="PublisherLocation">Ort</label>
+                <input type="text" name="PublisherLocation" id="PublisherLocation" value=""/>
+            </div>
+
+            <div data-role="fieldcontain">
+                <label for="PublisherZipCode">PLZ</label>
+                <input type="text" name="PublisherZipCode" id="PublisherZipCode" value=""/>
+            </div>
+
+            <div data-role="fieldcontain">
+                <label for="PublisherAdress">Adresse</label>
+                <input type="text" name="PublisherAdress" id="PublisherAdress" value=""/>
+            </div>
+
+            <button type="submit" data-theme="a" id="submitnewpublisher">Erstellen</button>
+
+        </form>
+
+    </div>
+
+    <footer data-role="footer">
+        <nav data-role="navbar">
+            <ul>
+                <li><a href="searchpublishers.html" data-transition="slidedown" data-icon="search">Suche</a></li>
+                <li><a href="index.html#new" data-transition="slidedown" data-icon="back">Zur&uuml;ck</a></li>
+                <li><a href="contact.html" class="ui-btn-active" data-transition="slidedown" data-icon="contact">Kontakt</a></li>
+            </ul>
+
+        </nav>
+
+    </footer>
+
+    <script type="text/javascript">
+
+        //Formdaten an PHP-Datei senden
+        $("form#publisher-new-form").submit(function() {
+            // we want to store the values from the form input box, then send via ajax below
+            var PublisherTitle = $('#PublisherTitle').attr('value');
+            var PublisherLocation = $('#PublisherLocation').attr('value');
+            $.ajax({
+                type: "get",
+                url: "submitnewpublisher.php",
+                data: "PublisherTitle="+ PublisherTitle +"&PublisherLocation="+ PublisherLocation,
+                success: function(){
+                    $.mobile.changePage("publisher-success.html", { transition: "flip"} );
+                }
+            });
+            return false;
+        });
+
+
+    </script>
+
+
+
+</div>
+</body>
+</html>

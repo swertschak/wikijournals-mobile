@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wikijournals Mobile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0-alpha.1/jquery.mobile-1.2.0-alpha.1.min.css" />
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.2.0-alpha.1/jquery.mobile-1.2.0-alpha.1.min.js"></script>
+    <script type="text/javascript" src="http://j27385.servers.jiffybox.net/wjmobile/libs/datatables/js/jquery.dataTables.js"></script>
+    <link rel="stylesheet" href="styles/styles.css"/>
+    <link rel="stylesheet" href="http://j27385.servers.jiffybox.net/wjmobile/libs/datatables/css/jquery.dataTables.css">
+    <script type="text/javascript">
+        $(document).ready(function()
+                {   $("#resulttable").dataTable()
+                })
+
+    </script>
+
+
+    </head>
+<body>
+
+<div data-role="page" id="welcome">
+
+    <header data-role="header">
+          <h1>Wikijournals</h1>
+    </header>
+
+    <div data-role="content">
+
+     <p>
+        Herzlich willkommen bei Wikijournals. Ziel dieses Wiki ist es, eine zentrale Stelle f&uuml;r die Suche nach Zeitungs- und Zeitschriftenartikeln sowie sonstigen Publikationen zu schaffen.
+    </p>
+    <p>
+        &Uuml;ber den Button "Neu" k&ouml;nnen Artikel, Publikationen, Verlage und Autoren angelegt werden. &Uuml;ber den Button "Suche" k&ouml;nnen Artikel, Publikationen, Verlage und Autoren gesucht werden.
+    </p>
+
+    <b>Mitmachen erw&uuml;nscht</b>
+
+    <p>
+        Dieses Wiki lebt vom aktiven Mitmachen. Jeder kann selbst Artikel eintragen. Wer mitmachen m&ouml;chte,
+        schickt bitte eine Mail an den Administrator mit dem gew&uuml;nschten Benutzernamen. Ihr erhaltet dann eine
+        entsprechende Mail mit den Zugangsdaten. Nach der Anmeldung k&ouml;nnen neue Artikel &uuml;ber den Eintrag "Neu"
+        aus der linken Navigationsleiste erstellt werden.
+     </p>
+    <p>
+
+        Dieses Wiki steht noch am Anfang, es ist daher noch nicht alles perfekt. Wer Anregungen und W&uuml;nsche hat,
+        oder Fehler findet, kann diese auf der Facebookseite von Wikijournals eintragen. Dort findet ihr auch
+        Berichte &uuml;ber Neuentwicklungen und sonstige Diskussionsanregungen :o)
+    </p>
+
+            <footer data-role="footer">
+                <nav data-role="navbar">
+                    <ul>
+                        <li><a href="#new" class="ui-btn-active" data-transition="slidedown" data-icon="plus">Neu</a></li>
+                        <li><a href="#search" class="ui-btn-active" data-transition="slidedown" data-icon="search">Suche</a></li>
+                        <li><a href="contact.html" class="ui-btn-active" data-transition="slidedown" data-icon="contact">Kontakt</a></li>
+
+                    </ul>
+
+                </nav>
+            </footer>
+
+    </div>
+
+
+
+</div><!-- /page -->
+
+<div data-role="page" id="search">
+
+    <header data-role="header">
+        <a href="index.html#welcome" data-role="button" data-icon="home" data-iconpos="notext">Home</a>
+        <h1>Suche</h1>
+
+
+
+    </header>
+    <div data-role="content">
+    <ul data-role="listview">
+        <li><a href="searcharticles.html" data-transition="slidedown">Artikel</a></li>
+        <li><a href="searchpublications.html" data-transition="slidedown">Publikationen</a></li>
+        <li><a href="searchpublishers.html" data-transition="slidedown">Verlage</a></li>
+        <li><a href="searchauthors.html" data-transition="slidedown">Autoren</a></li>
+    </ul>
+    </div>
+
+    <footer data-role="footer">
+        <nav data-role="navbar">
+            <ul>
+                <li><a href="#new" data-transition="slidedown" data-icon="plus">Neu</a></li>
+                <li><a href="#welcome" data-transition="slidedown" data-icon="back">Zur&uuml;ck</a></li>
+                <li><a href="contact.html" class="ui-btn-active" data-transition="slidedown" data-icon="contact">Kontakt</a></li>
+
+
+            </ul>
+
+        </nav>
+
+    </footer>
+
+</div>
+
+<div data-role="page" id="new">
+    <header data-role="header">
+        <a href="index.html#welcome" data-role="button" data-icon="home" data-iconpos="notext">Home</a>
+        <h1>Neu</h1>
+
+
+
+    </header>
+    <div data-role="content">
+    <ul data-role="listview">
+        <li><a href="newarticle.html" data-transition="slidedown">Artikel</a></li>
+        <li><a href="newpublication.html" data-transition="slidedown">Publikationen</a></li>
+        <li><a href="newpublisher.html" data-transition="slidedown">Verlage</a></li>
+        <li><a href="newauthor.html" data-transition="slidedown">Autoren</a></li>
+    </ul>
+    </div>
+
+    <footer data-role="footer">
+        <nav data-role="navbar">
+            <ul>
+
+                <li><a href="#search" data-transition="slidedown" data-icon="search">Suche</a></li>
+                <li><a href="#welcome" class="ui-btn-active" data-transition="slidedown" data-icon="back">Zur&uuml;ck</a></li>
+                <li><a href="contact.html" class="ui-btn-active" data-transition="slidedown" data-icon="contact">Kontakt</a></li>
+
+            </ul>
+
+        </nav>
+
+    </footer>
+</div>
+
+</body>
+</html>

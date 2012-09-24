@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wikijournals Mobile</title>
+</head>
+<body>
+<div data-role="page" id="newarticle">
+    <header data-role="header">
+        <a href="index.html#welcome" data-role="button" data-icon="home" data-iconpos="notext">Home</a>
+
+        <h1>Neuer Artikel</h1>
+
+    </header>
+
+    <div data-role="content" id="article-new-content">
+        <form id="article-new-form">
+            <div data-role="fieldcontain">
+                <label for="ArticleTitle">Titel*</label>
+                <input type="text" name="ArticleTitle" id="ArticleTitle" value="" />
+            </div>
+
+            <div data-role="fieldcontain">
+                <label for="ArticleSubTitle">Untertitel</label>
+                <input type="text" name="ArticleSubTitle" id="ArticleSubTitle" value="" />
+            </div>
+
+            <div data-role="fieldcontain">
+                <label for="ArticleRubric">Rubrik</label>
+                <input type="text" name="ArticleRubric" id="ArticleRubric" value="" />
+            </div>
+
+            <div data-role="fieldcontain">
+                <label for="ArticlePage">Seite*</label>
+                <input type="number" name="ArticlePage" id="ArticlePage" value="" />
+            </div>
+
+            <div data-role="fieldcontain">
+                <label for="PublicationTitle">Publikation*</label>
+                <input type="text" name="PublicationTitle" id="PublicationTitle" value="" />
+            </div>
+
+            <div data-role="fieldcontain">
+                <label for="ArticleYear">Jahr*</label>
+                <input type="text" name="ArticleYear" id="ArticleYear" value="" />
+            </div>
+
+            <div data-role="fieldcontain">
+                <label for="PublicationIssue">Ausgabe*</label>
+                <input type="text" name="PublicationIssue" id="PublicationIssue" value="" />
+            </div>
+
+            <div data-role="fieldcontain">
+                <label for="AuthorName">Autor*</label>
+                <input type="text" name="AuthorName" id="AuthorName" value="" />
+            </div>
+
+            <button type="submit" data-theme="a" id="submitnewarticle">Erstellen</button>
+        </form>
+
+    </div>
+
+
+    <footer data-role="footer">
+        <nav data-role="navbar">
+            <ul>
+                <li><a href="searcharticles.html" data-transition="slidedown" data-icon="search">Suche</a></li>
+                <li><a href="index.html#new" data-transition="slidedown" data-icon="back">Zur&uuml;ck</a></li>
+                <li><a href="contact.html" class="ui-btn-active" data-transition="slidedown" data-icon="contact">Kontakt</a></li>
+            </ul>
+
+        </nav>
+    </footer>
+    <script type="text/javascript">
+
+        //Formdaten an PHP-Datei senden
+        $("form#article-new-form").submit(function() {
+            // we want to store the values from the form input box, then send via ajax below
+            var ArticleTitle = $('#ArticleTitle').attr('value');
+            var ArticleRubric = $('#ArticleRubric').attr('value');
+            var PublicationTitle = $('#PublicationTitle').attr('value');
+            var ArticleYear  = $('#ArticleYear').attr('value');
+            var PublicationIssue  = $('#PublicationIssue').attr('value');
+            var AuthorName  = $('#AuthorName').attr('value');
+
+            $.ajax({
+                type: "get",
+                url: "submitnewarticle.php",
+                data: "ArticleTitle="+ ArticleTitle +"&ArticleRubric="+ ArticleRubric+ "&PublicationTitle="+PublicationTitle+ "&ArticleYear="+ArticleYear+"&PublicationIssue"+PublicationIssue+"&AuthorName"+AuthorName,
+                success: function(){
+                    $.mobile.changePage("article-success.html", { transition: "flip"} );
+                }
+            });
+            return false;
+        });
+
+
+    </script>
+
+
+</div>
+</body>
+</html>

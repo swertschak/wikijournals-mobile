@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wikijournals Mobile</title>
+</head>
+<body>
+<div data-role="page">
+    <header data-role="header">
+        <a href="index.html#welcome" data-role="button" data-icon="home" data-iconpos="notext">Home</a>
+        <h1>Suchergebnisse</h1>
+
+    </header>
+
+    <div data-role="content" id="publisher-search-result-content">
+        <ul data-role="listview" data-filter="true">
+            <li data-role="list-divider"></li>
+            <li><a href="testPublisher1.html">
+                <h3>Heise Zeitschriften Verlag GmbH & Co KG</h3>
+                <p>30625  Hannover, Karl-Wiechert-Allee 10</p>
+            </a></li>
+            <li><a href="testPublisher2.html">
+                <h3>Gruner + Jahr </h3>
+                <p>20459 Hamburg, Am Baumwall 11</p>
+            </a></li>
+            <li><a href="testPublisher3.html">
+                <h3>Axel Springer AG</h3>
+                <p>10888 Berlin, Axel-Springer-Straße 65</p>
+            </a></li>
+        </ul>
+
+        <!--<script type="text/javascript">
+            var articles=$.getJSON("testArticles.json");
+            var data= $.parseJSON(articles);
+            $.each(data,function(index,value){
+                $('#output').children('ul').append('<li><p>'+value+'</p></li>').listview('refresh');});
+
+        </script>-->
+
+        <a href="#popupPublisherSort" data-rel="popup" data-role="button">Sortieren</a>
+
+
+         <div data-role="popup" id="popupPublisherSort">
+
+                <fieldset data-role="controlgroup">
+                    <input type="radio" name="radio-pulisher-sort" id="radio-publisher-sort-1" value="radio-publisher-sort-1" checked="checked" />
+                    <label for="radio-publisher-sort-1">Name</label>
+                    <input type="radio" name="radio-publisher-sort" id="radio-publisher-sort-2" value="radio-publisher-sort-2"/>
+                    <label for="radio-publisher-sort-2">Ort</label>
+                    <input type="radio" name="radio-publisher-sort" id="radio-publisher-sort-3" value="radio-publisher-sort-3"/>
+                    <label for="radio-publisher-sort-3">Datum</label>
+                </fieldset>
+
+        </div>
+
+
+
+    </div>
+
+
+    <footer data-role="footer">
+        <nav data-role="navbar">
+            <ul>
+
+                <li><a href="newarticle.html" data-transition="slidedown" data-icon="plus">Neu</a></li>
+                <li><a href="searchpublishers.html" data-transition="slidedown" data-icon="back">Zur&uuml;ck</a></li>
+                <li><a href="contact.html" class="ui-btn-active" data-transition="slidedown" data-icon="contact">Kontakt</a></li>
+            </ul>
+
+        </nav>
+
+    </footer>
+
+
+</div>
+
+</body>
+</html>

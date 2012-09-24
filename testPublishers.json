@@ -1,0 +1,30 @@
+{"publishers": [
+    {
+        "publisherID": "Ea1e5147-f3dc-47ad-8a2b-6b2f50a59ec6",
+        "Publisher": "Heise Zeitschriften Verlag GmbH & Co KG",
+        "PublisherHomepage":"http://www.heise-medien.de/",
+        "PublisherLocation":"Hannover",
+        "PublisherZipCode":"30625",
+        "PublisherAdress":"Karl-Wiechert-Allee 10",
+        "ReleaseStatus": "Freigegeben"
+    },
+    {
+        "publisherID": "B59d364b-7b45-40ea-b123-4342dc81dec2",
+        "Publisher": "Gruner + Jahr",
+        "PublisherHomepage":"http://www.guj.de/",
+        "PublisherLocation":"Hamburg",
+        "PublisherZipCode":"20459",
+        "PublisherAdress":"Am Baumwall 11",
+        "ReleaseStatus": "Freigegeben"
+    },
+    {
+        "publisherID": "793b0578-0323-4c3e-8b26-f22e5836b318",
+        "Publisher": "Axel Springer AG",
+        "PublisherHomepage":"http://www.axelspringer.de/",
+        "PublisherLocation":"Berlin",
+        "PublisherZipCode":"10888",
+        "PublisherAdress":"Axel-Springer-Straße 65",
+        "ReleaseStatus": "Freigegeben"
+    }
+
+]}

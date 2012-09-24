@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wikijournals Mobile</title>
+</head>
+<body>
+
+<div data-role="page">
+    <header data-role="header">
+        <a href="index.html#welcome" data-role="button" data-icon="home" data-iconpos="notext">Home</a>
+        <h1>Suchergebnisse</h1>
+
+    </header>
+
+    <div data-role="content" id="publication-search-result-content">
+        <ul data-role="listview" data-filter="true">
+            <li data-role="list-divider"></li>
+            <li><a href="testPublication1.html">
+                <h3>CT Magazin</h3>
+                <p>Verlag:Heise Zeitschriften Verlag GmbH & Co KG </p>
+            </a></li>
+            <li><a href="testPublication2.html">
+                <h3>Hörzu</h3>
+                <p>Verlag:Gruner + Jahr </p>
+            </a></li>
+
+        </ul>
+
+        <!--<script type="text/javascript">
+            var articles=$.getJSON("testArticles.json");
+            var data= $.parseJSON(articles);
+            $.each(data,function(index,value){
+                $('#output').children('ul').append('<li><p>'+value+'</p></li>').listview('refresh');});
+
+        </script>-->
+
+        <a href="#popupPublicationSort" data-rel="popup" data-role="button">Sortieren</a>
+
+
+        <div data-role="popup" id="popupPublicationSort">
+
+            <fieldset data-role="controlgroup">
+                <input type="radio" name="radio-publication-sort" id="radio-publication-sort-1" value="radio-publication-sort-1" checked="checked" />
+                <label for="radio-publication-sort-1">Titel</label>
+                <input type="radio" name="radio-publication-sort" id="radio-publication-sort-2" value="radio-publication-sort-2"/>
+                <label for="radio-publication-sort-2">Verlag</label>
+                <input type="radio" name="radio-publication-sort" id="radio-publication-sort-3" value="radio-publication-sort-3"/>
+                <label for="radio-publication-sort-3">Datum</label>
+            </fieldset>
+
+        </div>
+
+
+
+    </div>
+
+
+    <footer data-role="footer">
+        <nav data-role="navbar">
+            <ul>
+
+                <li><a href="newarticle.html" data-transition="slidedown" data-icon="plus">Neu</a></li>
+                <li><a href="searchpublications.html" data-transition="slidedown" data-icon="back">Zur&uuml;ck</a></li>
+                <li><a href="contact.html" class="ui-btn-active" data-transition="slidedown" data-icon="contact">Kontakt</a></li>
+            </ul>
+
+        </nav>
+
+    </footer>
+
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wikijournals Mobile</title>
+</head>
+<body>
+<div data-role="page">
+    <header data-role="header">
+        <a href="index.html#welcome" data-role="button" data-icon="home" data-iconpos="notext">Home</a>
+        <h1>Suchergebnisse</h1>
+
+    </header>
+
+    <div data-role="content" id="article-search-result-content">
+        <ul data-role="listview" data-filter="true">
+            <li data-role="list-divider"></li>
+            <li><a href="testArticle1.html">
+                <h3>Spass aufs Tablett</h3>
+                <p>CT Magazin, Heft 14/2012, Rubrik: Aktuell, S. 32</p>
+            </a></li>
+            <li><a href="testArticle2.html">
+                <h3>Sandkasten</h3>
+                <p>CT Magazin, Heft 13/2012, Rubrik: Prüfstand, S. 66</p>
+            </a></li>
+            <li><a href="testArticle3.html">
+                <h3>Fortschrittchen</h3>
+                <p>CT Magazin, Heft 14/2012, Rubrik: Prüfstand, S. 64</p>
+            </a></li>
+        </ul>
+
+        <!--<script type="text/javascript">
+            var articles=$.getJSON("testArticles.json");
+            var data= $.parseJSON(articles);
+            $.each(data,function(index,value){
+                $('#output').children('ul').append('<li><p>'+value+'</p></li>').listview('refresh');});
+
+        </script>-->
+
+        <a href="#popupArticleSort" data-rel="popup" data-role="button">Sortieren</a>
+
+
+         <div data-role="popup" id="popupArticleSort">
+
+                <fieldset data-role="controlgroup">
+                    <input type="radio" name="radio-article-sort" id="radio-article-sort-1" value="radio-article-sort-1" checked="checked" />
+                    <label for="radio-article-sort-1">Titel</label>
+                    <input type="radio" name="radio-article-sort" id="radio-article-sort-2" value="radio-article-sort-2"/>
+                    <label for="radio-article-sort-2">Publikation</label>
+                    <input type="radio" name="radio-article-sort" id="radio-article-sort-3" value="radio-article-sort-3"/>
+                    <label for="radio-article-sort-3">Datum</label>
+                </fieldset>
+
+        </div>
+
+
+
+    </div>
+
+
+    <footer data-role="footer">
+        <nav data-role="navbar">
+            <ul>
+
+                <li><a href="newarticle.html" data-transition="slidedown" data-icon="plus">Neu</a></li>
+                <li><a href="searchauthors.html" data-transition="slidedown" data-icon="back">Zur&uuml;ck</a></li>
+                <li><a href="contact.html" class="ui-btn-active" data-transition="slidedown" data-icon="contact">Kontakt</a></li>
+            </ul>
+
+        </nav>
+
+    </footer>
+
+
+</div>
+
+</body>
+</html>

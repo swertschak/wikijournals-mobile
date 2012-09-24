@@ -1,0 +1,22 @@
+{"authors": [
+    {
+        "authorID": "Ef9aa7b5-da97-4f60-9770-c7041d75275c",
+        "AuthorName": "Urs Mansmann",
+        "AuthorHomepage":"",
+        "AuthorLocation":"Hannover",
+        "AuthorZipCode":"",
+        "AuthorAdress":"",
+        "ReleaseStatus": "Freigegeben"
+    },
+    {
+        "authorID": "C6e45dbc-63c1-44f2-a5ab-273c2f87b236",
+        "AuthorName": "Thorsten Leemhuis",
+        "AuthorHomepage":"",
+        "AuthorLocation":"Hannover",
+        "AuthorZipCode":"",
+        "AuthorAdress":"",
+        "ReleaseStatus": "Freigegeben"
+    }
+
+
+]}
